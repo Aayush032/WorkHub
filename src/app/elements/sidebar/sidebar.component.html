@@ -1,0 +1,32 @@
+<div class="layout">
+  <aside class="sidebar">
+    <header>
+      <h3 class="title flex">
+        <i class="pi pi-bars bars"></i>
+        Work Hub
+      </h3>
+      <app-badge [fullname]="'Aayush Maharjan'"></app-badge>
+      <hr>
+    </header>
+    <ul>
+      @for (item of menuItems; track $index) {
+        <li>
+          <a [routerLink]="item.routerlink" routerLinkActive="active" class="menuItems">
+            <i [className]="item.icon"></i>
+            <span>
+              {{item.label}}
+            </span>
+          </a>
+        </li>
+      }
+    </ul>
+    <hr>
+    <footer class="flex">
+      <i class="pi pi-sign-out"></i>
+      <span>Logout</span>
+    </footer>
+  </aside>
+  <main class="content">
+    <app-main></app-main>
+  </main>
+</div>

@@ -80,3 +80,8 @@ li{
     border-radius: 6px;
     font-weight: 500;
 }
+.small-text{
+    font-family: 'Roboto',sans-serif;
+    font-size: 0.8rem;
+    color: white;
+}

@@ -1,16 +1,22 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
+import { LandingComponent } from './pages/landing/landing.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { SidebarComponent } from './elements/sidebar/sidebar.component';
 
 export const routes: Routes = [
     {
-        path : "home",
-        component : HomeComponent,
+        path : "Get-Started",
+        component : LandingComponent,
         title : "WorkHub"
     },
     {
         path : "",
-        redirectTo : "home",
-        pathMatch : 'full',
-        title : "WorkHub"
+        component : SidebarComponent,
+        children : [
+            {
+                path : "dashboard",
+                component : DashboardComponent
+            }
+        ]
     }
 ];
