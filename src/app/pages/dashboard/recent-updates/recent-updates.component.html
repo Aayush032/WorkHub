@@ -1,0 +1,8 @@
+<section class="recent-section"> 
+<app-header title="Recent Updates" [showBackButton]="false"></app-header>
+@if (isUpdatePresent) {
+    <p>Updates present</p>
+}@else {
+    <app-no-data heading="No records found" message="No recent updates"></app-no-data>
+}
+</section>

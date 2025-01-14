@@ -1,6 +1,5 @@
 .started-btn{
-    margin-top: 20px;
-    gap: 20px;
+    gap: 20px
 }
 .started-btn:hover{
     cursor: pointer;

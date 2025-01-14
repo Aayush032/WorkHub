@@ -1,0 +1,40 @@
+.project-table{
+    margin-block:20px;
+    border: 0.1px solid black;
+    border-radius: 12px;
+    overflow-x: auto;
+}
+.project-header{
+  /* background-color: aqua; */
+  justify-content: space-between;
+  align-items: start;
+}
+.header{
+  background-color: brown;
+}
+table{
+    width: 100%; /* Ensure the table occupies the full width */
+  border-collapse: collapse;
+    table-layout: fixed;
+}
+tr{
+    border-bottom: 1px solid black; /* Horizontal border between rows */
+}
+th, td {
+    text-align: left;
+    padding: 12px 15px;
+  }
+tbody tr:hover{
+    background-color: #ced4da;
+    font-weight: 500;
+  }
+.view{
+    padding: 3px;
+    background-color: var(--background-color);
+    width: 20%;
+    border-radius: 8px;
+    text-align: center;
+}
+.view:hover{
+    cursor: pointer;
+}

@@ -8,8 +8,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './primary-button.component.css'
 })
 export class PrimaryButtonComponent {
-  @Input() name!: string; 
-  @Input() icon!:string;
+  @Input() name?: string; 
+  @Input() icon?:string;
   @Output() onClick: EventEmitter<void> = new EventEmitter<void>();
 
   handleClick(){

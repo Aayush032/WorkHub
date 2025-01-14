@@ -1,0 +1,9 @@
+.header{
+    gap: 20px;
+    align-items: center;
+    background-color: blueviolet;
+    align-items: stretch;
+}
+i{
+    font-size: 1.7rem;
+}

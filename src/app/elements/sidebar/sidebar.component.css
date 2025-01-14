@@ -52,7 +52,7 @@
     .content {
       flex: 1;
       padding: 1rem;
-      background-color: #ecf0f1;
+      background-color: var(--background-color);
     }
   }
 footer{

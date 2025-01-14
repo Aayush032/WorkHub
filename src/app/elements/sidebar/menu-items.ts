@@ -13,5 +13,10 @@ export const MenuItems =  [
             routerlink : "/department",
             label : "Department",
             icon : "pi pi-warehouse"
+        },
+        {
+            routerlink: "/client",
+            label: "Client",
+            icon: "pi pi-users"
         }
     ]

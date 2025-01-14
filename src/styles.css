@@ -15,12 +15,13 @@
     --accent-color: #2294ed;
     --accent-color-dark: #1d69a3;
     --padding-inline-section: 20px;
+    --background-color:#f8f9fa
 }
 
 body{
     font-family: 'Poppins', sans-serif;
     color: var(--primary-text-color);
-
+    background-color: var(--background-color);
 }
 h1{
     font-size: 3rem;
@@ -45,6 +46,9 @@ a{
 li{
     list-style: none;
 }
+section{
+    margin-bottom: 20px;
+}
 
 /* UTILITY CLASSES */
 .container{
@@ -61,7 +65,6 @@ li{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 .primary-btn{
     border-radius: 6px;
@@ -84,4 +87,8 @@ li{
     font-family: 'Roboto',sans-serif;
     font-size: 0.8rem;
     color: white;
+}
+.medium-text{
+    font-family: 'Roboto',sans-serif;
+    font-size: 1rem;
 }
