@@ -1,0 +1,8 @@
+.create-btn{
+    padding-inline: 20px;
+}
+.disabled {
+    background-color: var(--accent-color);
+    cursor: not-allowed;
+    opacity: 0.6;
+  }

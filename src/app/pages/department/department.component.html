@@ -1,3 +1,38 @@
 <section class="department-section">
-    <app-header title="Department Details" [showBackButton]="false"></app-header>
+    <div class="project-header flex">
+        <div class="header">
+          <app-header title="Department Details" [showBackButton]="false"></app-header>
+        </div>
+        <div class="add-button">
+          <app-primary-button name="New Department" icon="pi pi-plus" (onClick)="onCreate()"></app-primary-button>
+        </div>
+      </div>
+      @if (isDepartmentPresent) {
+        <div class="project-table">
+            <table>
+               <thead>
+                   <tr>
+                     <th>Name</th>
+                     <th>Description</th>
+                     <th>Code</th>
+                     <th>Status</th>
+                     <th>Actions</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   @for (item of departmentResponse; track $index) {
+                       <tr>
+                           <td>{{item.name}}</td>
+                           <td>{{item.description}}</td>
+                           <td>{{item.code}}</td>
+                           <td>{{item.status}}</td>
+                           <td><div class="view"><i class="pi pi-eye"></i></div></td>
+                       </tr> 
+                   }
+                 </tbody>
+            </table>
+           </div>
+    }@else {
+        <app-no-data [heading]="'No records found'" [message]="'No departments added.'"></app-no-data>
+    }
 </section>

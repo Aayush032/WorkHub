@@ -1,7 +1,7 @@
 <section class="header flex">
-    <div class="back-btn">
+    <div class="back-btn column-flex">
         @if (showBackButton) {
-            <i class="pi pi-chevron-circle-left"></i>
+            <i class="pi pi-chevron-circle-left" (click)="onBack()"></i>
         }
     </div>
     <div class="title">

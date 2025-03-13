@@ -1,4 +1,6 @@
 <div class="primary-btn flex started-btn" (click)="handleClick()">
-                {{name}}
-                <i class={{icon}}></i>
+    @if(icon){
+        <i class={{icon}}></i>
+    }
+    {{name}}
 </div>

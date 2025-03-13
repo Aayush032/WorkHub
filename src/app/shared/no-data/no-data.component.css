@@ -1,4 +1,6 @@
 .no-data-card{
     column-gap: 10px;
     margin-block: 30px;
+    justify-content: center;
+    height: 40vh;
 }

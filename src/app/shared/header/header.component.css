@@ -1,9 +1,17 @@
 .header{
-    gap: 20px;
-    align-items: center;
-    background-color: blueviolet;
-    align-items: stretch;
+    gap: 10px;
+    margin: 0px;
+    /* background-color: antiquewhite; */
+ }
+.title{
+    justify-content: center;
+}
+.back-btn{
+    justify-content: center;
 }
 i{
     font-size: 1.7rem;
+}
+i:hover{
+    cursor: pointer;
 }

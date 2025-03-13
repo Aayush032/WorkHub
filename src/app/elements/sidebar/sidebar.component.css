@@ -13,6 +13,9 @@
     height: 100vh;
   
     .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh; 
       width: 250px;
       background-color: var(--accent-color-dark);
       color: #ecf0f1;
@@ -22,6 +25,8 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      overflow-y: auto; /* If content overflows, enable scrolling */
+
     
       ul {
         list-style: none;
@@ -53,6 +58,8 @@
       flex: 1;
       padding: 1rem;
       background-color: var(--background-color);
+      overflow-y: auto;
+      height: 100vh;
     }
   }
 footer{

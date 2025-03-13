@@ -6,7 +6,12 @@ import { TeamLeadComponent } from './pages/team-lead/team-lead.component';
 import { DepartmentComponent } from './pages/department/department.component';
 import {PAGES} from './constants/page-constant';
 import { ClientComponent } from './pages/client/client.component';
+import { DepartmentCreateComponent } from './pages/department/create/create-department.component';
 
+export enum DEPARTMENT_ROUTES {
+    DEPARTMENT = 'department',
+    CREATE = 'create',
+}
 export const routes: Routes = [
     {
         path : PAGES.GETSTARTED,
@@ -35,8 +40,8 @@ export const routes: Routes = [
             },
             {
                 path:PAGES.DEPARTMENT,
-                component:DepartmentComponent,
-                title:"Departments"
+                title:"Departments",
+                loadChildren: () => import('./router/department-route').then(module => module.Routes)
             },
             {
                 path:PAGES.CLIENT,
@@ -46,3 +51,4 @@ export const routes: Routes = [
         ]
     }
 ];
+

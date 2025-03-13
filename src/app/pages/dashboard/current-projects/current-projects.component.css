@@ -4,14 +4,6 @@
     border-radius: 12px;
     overflow-x: auto;
 }
-.project-header{
-  /* background-color: aqua; */
-  justify-content: space-between;
-  align-items: start;
-}
-.header{
-  background-color: brown;
-}
 table{
     width: 100%; /* Ensure the table occupies the full width */
   border-collapse: collapse;

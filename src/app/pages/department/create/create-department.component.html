@@ -1,0 +1,31 @@
+<section class="create-department">
+    <div class="project-header flex">
+          <app-header title="Create New Department" [showBackButton]="true"></app-header>
+      </div>
+      <div class="form-section flex">
+        <form [formGroup]="departmentForm" class="form column-flex">
+            <div class="input">
+                <label for="name">Name</label>
+                <div class="input-field">    
+                    <input id="name" formControlName="name" autocomplete="off" />
+                </div>
+            </div>
+            <div class="input">
+                <label for="code">Code</label>
+                <div class="input-field">
+                    <input id="code" formControlName="code" autocomplete="off" />
+                </div>
+            </div>
+            <div class="input">
+                <label for="description">Description</label>
+                <div class="text-area">
+                    <textarea id="description" formControlName="description" autocomplete="off" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="button-group create-btn">
+                <button type="submit" class="primary-btn"  [disabled]="!isFormValid" (click)="onCreate()">Create</button>
+                <button type="submit" class="secondary-btn" (click)="onCancel()">Cancel</button>
+            </div>
+            </form>
+      </div>
+</section>

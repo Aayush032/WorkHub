@@ -1,94 +1,187 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap");
 @import "primeicons/primeicons.css";
 
 /* CSS Resets */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --primary-text-color: #183b56;
-    --secondary-text-color: #577592;
-    --accent-color: #2294ed;
-    --accent-color-dark: #1d69a3;
-    --padding-inline-section: 20px;
-    --background-color:#f8f9fa
+:root {
+  --primary-text-color: #183b56;
+  --secondary-text-color: #577592;
+  --accent-color: #2294ed;
+  --accent-color-dark: #1d69a3;
+  --padding-inline-section: 20px;
+  --background-color: #f8f9fa;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    color: var(--primary-text-color);
-    background-color: var(--background-color);
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
 }
-h1{
-    font-size: 3rem;
+h1 {
+  font-size: 3rem;
 }
-h2{
-    font-size: 2rem;
+h2 {
+  font-size: 2rem;
 }
-h3{
-    font-size: 1.5rem;
+h3 {
+  font-size: 1.5rem;
 }
-p{
-    font-family: 'Roboto',sans-serif;
-    font-size: 1.5rem;
-    color: var(--secondary-text-color);
-    line-height: 1.8rem;
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  color: var(--secondary-text-color);
+  line-height: 1.8rem;
 }
-a{
-    text-decoration: none;
-    display: inline-block;
-    color: black;
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: black;
 }
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
-section{
-    margin-bottom: 20px;
+section {
+  margin-bottom: 20px;
+}
+input {
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  font-size: 1.3rem;
+  background-color: transparent;
+}
+textarea{
+    resize: none;
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    font-size: 1.3rem;
+}
+button{
+    outline: none;
+    border: none;
+}
+button:disabled {            /* Dim the text */
+  cursor: not-allowed !important;      /* Show a disabled cursor */
+  opacity: 0.6;
 }
 
 /* UTILITY CLASSES */
-.container{
-    max-width: 1180px;
-    margin-inline: auto;
-    padding-inline: var(--padding-inline-section);
-    overflow: hidden;
+.container {
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: var(--padding-inline-section);
+  overflow: hidden;
 }
-.flex{
-    display: flex;
+.flex {
+  display: flex;
+  align-items: center;
+}
+.column-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-header{
+  /* background-color: aqua; */
+  justify-content: space-between;
+  align-items: center;
+}
+.header-component {
+  position: sticky;
+  top: 0px;
+}
+.button-group{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+/* BUTTONS CLASSES */
+.primary-btn {
+  border-radius: 6px;
+  background-color: var(--accent-color);
+  padding: 12px 24px;
+  color: white !important;
+  font-weight: 500;
+}
+.primary-btn:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 3px 10px rgba(0, 0, 0, 0.15);
+
+}
+.secondary-btn {
+  background-color: rgb(168, 41, 41);
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: white !important;
+}
+.secondary-btn:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 3px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+/* TYPOGRAPHY */
+.small-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  color: white;
+}
+.medium-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+/* INPUT FIELDS */
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  padding-inline: 20px;
+}
+.input-field {
+  width: 100%;
+  height: 45px;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: 20px;
+  padding-inline: 8px;
+}
+.text-area{
+    width: 100%;
     align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 20px;
+    padding: 5px;
 }
-.column-flex{
+
+.form-section {
+  justify-content: center;
+  align-items: start;
+  margin-block: 20px;
+  height: 70vh;
+}
+.form {
+    padding-block: 20px;
+    background-color: white;
+    border-radius: 15px;
+    height: 100%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.primary-btn{
-    border-radius: 6px;
-    background-color: var(--accent-color);
-    padding: 12px 24px;
-    color: white !important;
-    font-weight: 500;
-
-}
-.primary-btn:hover{
-    background-color: var(--accent-color-dark);
-}
-.secondary-btn{
-    border: 0.5px solid var(--accent-color);
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-weight: 500;
-}
-.small-text{
-    font-family: 'Roboto',sans-serif;
-    font-size: 0.8rem;
-    color: white;
-}
-.medium-text{
-    font-family: 'Roboto',sans-serif;
-    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+    gap: 16px;
 }
