@@ -167,6 +167,7 @@ button:disabled {            /* Dim the text */
     padding: 5px;
 }
 
+/* FORMS SECTION*/
 .form-section {
   justify-content: center;
   align-items: start;
@@ -184,4 +185,38 @@ button:disabled {            /* Dim the text */
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
     gap: 16px;
+}
+
+/* TABLE SECTION */
+.project-table{
+  margin-block:20px;
+  border: 0.1px solid black;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+table{
+  width: 100%; /* Ensure the table occupies the full width */
+border-collapse: collapse;
+  table-layout: fixed;
+}
+tr{
+  border-bottom: 1px solid black; /* Horizontal border between rows */
+}
+th, td {
+  text-align: left;
+  padding: 12px 15px;
+}
+tbody tr:hover{
+  background-color: #ced4da;
+  font-weight: 500;
+}
+.view{
+  padding: 3px;
+  background-color: var(--background-color);
+  width: 20%;
+  border-radius: 8px;
+  text-align: center;
+}
+.view:hover{
+  cursor: pointer;
 }

@@ -1,0 +1,14 @@
+<div class="loader-container">
+    @if (isLoading) {
+
+        <div class="loader-overlay">
+            <div class="loader"></div>
+        </div>
+    }
+    @if (!isLoading) {
+        <ng-container>
+            <ng-content></ng-content> <!-- This projects the wrapped content -->
+        </ng-container>
+    }
+  </div>
+  

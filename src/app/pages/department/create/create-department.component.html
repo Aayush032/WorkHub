@@ -22,6 +22,7 @@
                     <textarea id="description" formControlName="description" autocomplete="off" rows="5"></textarea>
                 </div>
             </div>
+            <p-toast position="bottom-right" key="br" />
             <div class="button-group create-btn">
                 <button type="submit" class="primary-btn"  [disabled]="!isFormValid" (click)="onCreate()">Create</button>
                 <button type="submit" class="secondary-btn" (click)="onCancel()">Cancel</button>

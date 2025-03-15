@@ -7,6 +7,8 @@
           <app-primary-button name="New Department" icon="pi pi-plus" (onClick)="onCreate()"></app-primary-button>
         </div>
       </div>
+      <app-loader [isLoading]="isLoading">
+        <ng-container>
       @if (isDepartmentPresent) {
         <div class="project-table">
             <table>
@@ -22,9 +24,9 @@
                  <tbody>
                    @for (item of departmentResponse; track $index) {
                        <tr>
-                           <td>{{item.name}}</td>
+                           <td>{{item.departmentName}}</td>
                            <td>{{item.description}}</td>
-                           <td>{{item.code}}</td>
+                           <td>{{item.departmentCode}}</td>
                            <td>{{item.status}}</td>
                            <td><div class="view"><i class="pi pi-eye"></i></div></td>
                        </tr> 
@@ -32,7 +34,12 @@
                  </tbody>
             </table>
            </div>
-    }@else {
+          }
+        </ng-container>
+        <ng-container>
+    @if (!isDepartmentPresent) {
         <app-no-data [heading]="'No records found'" [message]="'No departments added.'"></app-no-data>
-    }
+      }
+    </ng-container>
+      </app-loader>
 </section>
